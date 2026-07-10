@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Account Access | AeroClick</title>
+  <meta name="description" content="Login or sign up to AeroClick to save your training results, unlock achievements, and access personalized performance tracking.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Account Access | AeroClick">
+  <meta property="og:description" content="Login or sign up to AeroClick to save your training results, unlock achievements, and access personalized performance tracking.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/html/auth.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Account Access | AeroClick">
+  <meta name="twitter:description" content="Login or sign up to AeroClick to save your training results, unlock achievements, and access personalized performance tracking.">
+  <meta name="keywords" content="login, sign up, account access, save scores, achievements, training progress, AeroClick account">
+  <link rel="canonical" href="https://aeroclick.web.app/html/auth.html">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="mouse-study.html" class="nav-link">Mouse Training</a>
+        <a href="keyboard-study.html" class="nav-link">Typing Module</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+        <a href="legal.html" class="nav-link">Contact</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Auth Section -->
+  <main class="auth-section">
+    <div class="auth-container">
+      <div class="auth-header">
+        <h2 class="auth-title" id="form-title">Welcome Back</h2>
+        <p class="auth-desc" id="form-desc">Sign in to track your scores, unlock achievements, and climb the ranks.</p>
+      </div>
+
+      <div class="glass-card">
+        <!-- Tab Swapping -->
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="tab-login" data-tab="login">Sign In</button>
+          <button class="auth-tab" id="tab-signup" data-tab="signup">Sign Up</button>
+        </div>
+
+        <!-- Info Box for Sign Up -->
+        <div class="info-box" id="signup-info" style="display: none;">
+          <span class="info-box-icon">🔒</span>
+          <div>
+            <strong>No Email Required!</strong> We value your privacy. Simply choose a unique username and a password. Your credentials will map securely.
+          </div>
+        </div>
+
+        <form id="auth-form" novalidate>
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" class="form-input" placeholder="e.g. AimGod99" required minlength="3" maxlength="20" autocomplete="username">
+            <div class="form-help">Only letters, numbers, and underscores. Min 3 chars.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <div class="form-input-container">
+              <input type="password" id="password" class="form-input" placeholder="••••••••" required minlength="6" autocomplete="current-password">
+              <button type="button" class="input-icon-right" id="password-toggle" aria-label="Toggle password visibility">👁️</button>
+            </div>
+            <div class="form-help">Must be at least 6 characters.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-button" id="submit-btn">Sign In</button>
+        </form>
+
+        <p class="auth-footer" id="switch-prompt">
+          Don't have an account? <a href="#">Create Account</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global script & auth controller -->
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/auth.js"></script>
+</body>
+</html>

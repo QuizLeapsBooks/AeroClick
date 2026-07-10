@@ -1,0 +1,123 @@
+/* Stylesheet for Legal pages and Contact form */
+
+.legal-section {
+  padding: 60px 0;
+  flex-grow: 1;
+}
+
+.legal-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Tabs list */
+.legal-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--glass-border);
+  margin-bottom: 30px;
+  gap: 8px;
+}
+
+.legal-tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+  transition: all var(--transition-speed);
+}
+
+.legal-tab:hover {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+.legal-tab.active {
+  color: var(--accent-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-bottom-color: var(--bg-secondary);
+  margin-bottom: -2px;
+}
+
+/* Content panels */
+.legal-panel {
+  display: none;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.legal-panel.active {
+  display: block;
+}
+
+.legal-panel h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.legal-panel h4 {
+  font-size: 1.25rem;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.legal-panel p {
+  margin-bottom: 16px;
+}
+
+.legal-panel ul {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.legal-panel li {
+  margin-bottom: 8px;
+}
+
+/* Contact Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-info-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-info-icon {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--glass-border);
+}

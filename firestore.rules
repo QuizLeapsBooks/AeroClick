@@ -1,0 +1,67 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // --------------------------------------------------------
+    // /users/{userId}
+    // User profile documents - private to each authenticated user
+    // --------------------------------------------------------
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // --------------------------------------------------------
+    // /usernames/{username}
+    // Username reservation registry - ensures global uniqueness
+    // --------------------------------------------------------
+    match /usernames/{username} {
+      // Anyone can read to check availability during signup
+      allow read: if true;
+
+      // A logged-in user can reserve a username only if it points to their own UID
+      allow create: if request.auth != null
+                    && request.resource.data.uid == request.auth.uid;
+
+      // Only the owner of the reservation can update or release it
+      allow update, delete: if request.auth != null
+                             && resource.data.uid == request.auth.uid;
+    }
+
+    // --------------------------------------------------------
+    // /gameHistory/{gameId}
+    // Append-only game session history (one document per game)
+    // --------------------------------------------------------
+    match /gameHistory/{gameId} {
+      // Users can read their own game history records
+      allow read: if request.auth != null
+                  && resource.data.uid == request.auth.uid;
+
+      // Only the currently authenticated user can write their own history
+      allow create: if request.auth != null
+                    && request.resource.data.uid == request.auth.uid;
+
+      // Game records are immutable - no updates or deletes allowed
+      allow update, delete: if false;
+    }
+
+    // --------------------------------------------------------
+    // /leaderboard/{userId}
+    // Leaderboard entries - publicly readable but writable only by the authenticated owner
+    // --------------------------------------------------------
+    match /leaderboard/{userId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // --------------------------------------------------------
+    // /challenges/{challengeId}
+    // Matchmaking challenges between friends
+    // --------------------------------------------------------
+    match /challenges/{challengeId} {
+      allow read, create, update: if request.auth != null;
+      allow delete: if false;
+    }
+  }
+}

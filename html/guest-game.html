@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Guest Practice | AeroClick</title>
+  <meta name="description" content="Access AeroClick guest practice mode for instant mouse and typing drills without sign-in. Start training faster with no setup required.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Guest Practice | AeroClick">
+  <meta property="og:description" content="Access AeroClick guest practice mode for instant mouse and typing drills without sign-in. Start training faster with no setup required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/html/guest-game.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guest Practice | AeroClick">
+  <meta name="twitter:description" content="Access AeroClick guest practice mode for instant mouse and typing drills without sign-in. Start training faster with no setup required.">
+  <meta name="keywords" content="guest practice, mouse drills, typing drills, instant training, no login, AeroClick guest mode">
+  <link rel="canonical" href="https://aeroclick.web.app/html/guest-game.html">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/game.css">
+</head>
+<body>
+
+  <!-- Navigation Bar (Minimal during gameplay) -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div style="font-weight:600; color:var(--warning); font-size:0.85rem; padding:4px 12px; background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.3); border-radius:20px;">
+          ⚡ GUEST MODE — Not Saving
+        </div>
+        <div style="font-weight:600; color:var(--text-muted); font-size:0.9rem;" id="game-difficulty-badge">
+          DIFFICULTY: MEDIUM
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Gameplay Screen -->
+  <main class="game-section">
+    <div class="container">
+      <!-- HUD Dashboard -->
+      <div class="hud-grid">
+        <div class="glass-card hud-card">
+          <div class="hud-label">Score</div>
+          <div class="hud-val" id="hud-score" style="color: var(--accent-primary);">0</div>
+        </div>
+        <div class="glass-card hud-card">
+          <div class="hud-label">Accuracy</div>
+          <div class="hud-val" id="hud-accuracy" style="color: var(--accent-tertiary);">100%</div>
+        </div>
+        <div class="glass-card hud-card">
+          <div class="hud-label">CPS</div>
+          <div class="hud-val" id="hud-cps" style="color: var(--accent-secondary);">0.0</div>
+        </div>
+        <div class="glass-card hud-card">
+          <div class="hud-label">Streak</div>
+          <div class="hud-val" id="hud-streak" style="color: var(--warning);">0</div>
+        </div>
+        <div class="glass-card hud-card hud-time-card">
+          <div>
+            <div class="hud-label">Time Remaining</div>
+            <div class="hud-val" id="hud-time">30.0s</div>
+          </div>
+          <div class="time-bar-container">
+            <div class="time-bar" id="hud-time-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gameplay Board Container -->
+      <div class="gameboard-container" id="gameboard">
+        <!-- Pre-game countdown overlay -->
+        <div class="countdown-overlay" id="countdown-overlay">
+          <div class="countdown-number" id="countdown-number">3</div>
+          <div class="countdown-ready" id="countdown-text">READY</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/guest-game.js"></script>
+</body>
+</html>

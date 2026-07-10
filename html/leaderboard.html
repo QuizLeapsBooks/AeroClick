@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Global Rankings | AeroClick</title>
+  <meta name="description" content="See AeroClick’s global leaderboard and compare your high scores, accuracy, and reaction times against top players worldwide.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Global Rankings | AeroClick">
+  <meta property="og:description" content="See AeroClick’s global leaderboard and compare your high scores, accuracy, and reaction times against top players worldwide.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/html/leaderboard.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Global Rankings | AeroClick">
+  <meta name="twitter:description" content="See AeroClick’s global leaderboard and compare your high scores, accuracy, and reaction times against top players worldwide.">
+  <meta name="keywords" content="leaderboard, rankings, high scores, accuracy, reaction time, competitive training, global players">
+  <link rel="canonical" href="https://aeroclick.web.app/html/leaderboard.html">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/leaderboard.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="mouse-study.html" class="nav-link">Mouse Training</a>
+        <a href="keyboard-study.html" class="nav-link">Typing Module</a>
+        <a href="leaderboard.html" class="nav-link active">Leaderboard</a>
+        <a href="legal.html" class="nav-link">Contact</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">☀️</button>
+          <div id="auth-actions">
+            <!-- Dynamic Actions -->
+            <a href="auth.html" class="btn btn-secondary">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Leaderboard Section -->
+  <main class="leaderboard-section">
+    <div class="container leaderboard-container">
+      
+      <!-- Leaderboard Header -->
+      <div class="leaderboard-header">
+        <div class="badge">Global Records</div>
+        <h2 class="leaderboard-title">AeroClick Hall of Fame</h2>
+        <p style="color: var(--text-secondary); margin-top: 8px;">Compare your statistics with the best clickers around the globe. Auto-updates.</p>
+      </div>
+
+      <!-- User Rank Highlight Card -->
+      <div id="user-rank-container">
+        <!-- Rendered dynamically by JavaScript -->
+        <div class="user-rank-card" style="background: rgba(255,255,255,0.02); border-color: var(--glass-border);">
+          <div class="user-rank-info">
+            <div class="user-rank-avatar" style="background: var(--text-muted);">?</div>
+            <div class="user-rank-details">
+              <h4>Not Signed In</h4>
+              <p>Sign in to record your scores and claim your spot on the boards.</p>
+            </div>
+          </div>
+          <a href="auth.html" class="btn btn-primary">Login Now</a>
+        </div>
+      </div>
+
+      <!-- Search & Filter -->
+      <div class="search-container" style="display:flex; gap:16px; flex-wrap:wrap;">
+        <input type="text" id="search-input" class="search-input" placeholder="🔍 Search players by username..." style="flex:1;">
+        <select id="country-filter" class="search-input" style="width:auto; min-width:180px; appearance:auto;">
+          <option value="all">🌍 Global (All Countries)</option>
+          <option value="US">🇺🇸 United States</option>
+          <option value="UK">🇬🇧 United Kingdom</option>
+          <option value="CA">🇨🇦 Canada</option>
+          <option value="IN">🇮🇳 India</option>
+          <option value="DE">🇩🇪 Germany</option>
+          <option value="JP">🇯🇵 Japan</option>
+        </select>
+      </div>
+
+      <!-- Leaderboard Table Grid -->
+      <div class="table-responsive">
+        <table class="leaderboard-table" id="leaderboard-table">
+          <thead>
+            <tr>
+              <th style="width: 100px;">Rank</th>
+              <th>Player</th>
+              <th>Best Score</th>
+              <th>Accuracy</th>
+              <th>Reaction Time</th>
+              <th>Games Played</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+            <tr>
+              <td colspan="6" style="text-align: center; color: var(--text-secondary); padding: 40px 0;">
+                Loading rankings...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/leaderboard.js"></script>
+</body>
+</html>

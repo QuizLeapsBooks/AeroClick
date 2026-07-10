@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Training Session Results | AeroClick</title>
+  <meta name="description" content="Review your AeroClick training session results with scores, accuracy, CPS, reaction time, and rank to track improvement over time.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Training Session Results | AeroClick">
+  <meta property="og:description" content="Review your AeroClick training session results with scores, accuracy, CPS, reaction time, and rank to track improvement over time.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/html/results.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Training Session Results | AeroClick">
+  <meta name="twitter:description" content="Review your AeroClick training session results with scores, accuracy, CPS, reaction time, and rank to track improvement over time.">
+  <meta name="keywords" content="training results, score summary, accuracy, CPS, reaction time, performance rank, session history">
+  <link rel="canonical" href="https://aeroclick.web.app/html/results.html">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/results.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="mouse-study.html" class="nav-link">Mouse Training</a>
+        <a href="keyboard-study.html" class="nav-link">Typing Module</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+        <a href="legal.html" class="nav-link">Contact</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">☀️</button>
+          <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Results Section -->
+  <main class="results-section">
+    <div class="container results-container">
+      <div class="glass-card results-card">
+        <div class="badge">Session Summary</div>
+        <h2 style="font-size: 2.2rem; margin-top: 10px;">Training Completed!</h2>
+        
+        <!-- Rank Badge -->
+        <div style="margin-top: 15px;">
+          <div class="rank-badge-container rank-bronze" id="rank-badge">
+            <span id="rank-icon">🥉</span> <span id="rank-name">Bronze Rank</span>
+          </div>
+        </div>
+
+        <!-- Score circular gauge -->
+        <div class="score-gauge-container">
+          <div class="score-circle" id="score-circle">
+            <span class="score-title">Final Score</span>
+            <span class="score-value" id="res-score">0</span>
+          </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="results-grid">
+          <div class="metric-card">
+            <div class="metric-label">Accuracy</div>
+            <div class="metric-value" id="res-accuracy" style="color: var(--accent-tertiary);">0%</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Clicks Per Sec</div>
+            <div class="metric-value" id="res-cps" style="color: var(--accent-secondary);">0.0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Avg Reaction</div>
+            <div class="metric-value" id="res-reaction" style="color: var(--accent-primary);">0ms</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Streak Record</div>
+            <div class="metric-value" id="res-streak" style="color: var(--warning);">0</div>
+          </div>
+        </div>
+
+        <!-- Improvement Box -->
+        <div class="improvement-box">
+          <h4>📊 Improvement Statistics (vs. Personal Best)</h4>
+          <ul class="improvement-list">
+            <li class="improvement-item">
+              <span>Score Improvement:</span>
+              <span class="delta" id="pb-score-delta">--</span>
+            </li>
+            <li class="improvement-item">
+              <span>Accuracy Shift:</span>
+              <span class="delta" id="pb-accuracy-delta">--</span>
+            </li>
+            <li class="improvement-item">
+              <span>Reaction Speed Shift:</span>
+              <span class="delta" id="pb-reaction-delta">--</span>
+            </li>
+            <li class="improvement-item">
+              <span>Best Streak Shift:</span>
+              <span class="delta" id="pb-streak-delta">--</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Action Row -->
+        <div class="results-actions">
+          <a href="setup.html" class="btn btn-primary" style="padding: 12px 28px;">⚡ Play Again</a>
+          <a href="leaderboard.html" class="btn btn-secondary" style="padding: 12px 28px;">🏆 View Leaderboard</a>
+          <a href="../index.html" class="btn btn-accent" style="padding: 12px 28px;">🏠 Go Home</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/results.js"></script>
+</body>
+</html>

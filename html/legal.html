@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Legal & Support Center | AeroClick</title>
+  <meta name="description" content="AeroClick support and legal information including privacy, terms of service, and contact guidance for training users.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Legal & Support Center | AeroClick">
+  <meta property="og:description" content="AeroClick support and legal information including privacy, terms of service, and contact guidance for training users.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/html/legal.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Legal & Support Center | AeroClick">
+  <meta name="twitter:description" content="AeroClick support and legal information including privacy, terms of service, and contact guidance for training users.">
+  <meta name="keywords" content="legal, support, privacy, terms of service, contact, help center, AeroClick policies">
+  <link rel="canonical" href="https://aeroclick.web.app/html/legal.html">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/legal.css">
+  <link rel="stylesheet" href="../css/auth.css"> <!-- Reuses form inputs -->
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="mouse-study.html" class="nav-link">Mouse Training</a>
+        <a href="keyboard-study.html" class="nav-link">Typing Module</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+        <a href="legal.html" class="nav-link active">Contact</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">☀️</button>
+          <div id="auth-actions">
+            <a href="auth.html" class="btn btn-secondary">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Legal Section -->
+  <main class="legal-section">
+    <div class="container legal-container">
+      
+      <!-- Tabs header -->
+      <div class="legal-tabs">
+        <button class="legal-tab active" data-target="panel-privacy">Privacy Policy</button>
+        <button class="legal-tab" data-target="panel-terms">Terms & Conditions</button>
+        <button class="legal-tab" data-target="panel-cookies">Cookie Policy</button>
+        <button class="legal-tab" data-target="panel-disclaimer">Disclaimer</button>
+        <button class="legal-tab" data-target="panel-contact" id="tab-contact-btn">Contact Us</button>
+      </div>
+
+      <div class="glass-card" style="padding: 40px;">
+        
+        <!-- Privacy Policy Panel -->
+        <section id="panel-privacy" class="legal-panel active">
+          <h3>Privacy Policy</h3>
+          <p>Last updated: July 04, 2026</p>
+          <p>At AeroClick, we prioritize the privacy of our visitors. This Privacy Policy document outline the types of information we collect and how we safeguard it.</p>
+          
+          <h4>1. Information We Collect</h4>
+          <p>We do not request personal identity details like email addresses or phone numbers during our username-only sign up process. We collect:</p>
+          <ul>
+            <li>Your chosen Username and join timestamps.</li>
+            <li>Training results: Game scores, Click Speeds (CPS), Accuracy percentages, and Response speeds.</li>
+            <li>Match History Logs.</li>
+          </ul>
+
+          <h4>2. How We Use Your Data</h4>
+          <p>We utilize the collected information to generate global leaderboard standing statistics, track achievements, and display personal progress metrics inside your dashboard.</p>
+          
+          <h4>3. Third-Party Integrations</h4>
+          <p>We use Google Firebase Services as our secure cloud backend. Data submitted is stored securely in Firebase Auth and Firestore. We do not sell or trade user data to third-party brokers.</p>
+        </section>
+
+        <!-- Terms and Conditions Panel -->
+        <section id="panel-terms" class="legal-panel">
+          <h3>Terms and Conditions</h3>
+          <p>Last updated: July 04, 2026</p>
+          <p>Welcome to AeroClick. By accessing this website, you agree to comply with and be bound by the following terms of use.</p>
+          
+          <h4>1. Usage License</h4>
+          <p>AeroClick grants users a limited, personal, non-commercial license to interact with our click training target setups and keyboard speed modules.</p>
+          
+          <h4>2. Account Terms</h4>
+          <p>You are responsible for safeguarding the username and password chosen during signup. Duplicate usernames or automated bot integrations designed to artificially inflate leaderboard standings are strictly prohibited.</p>
+          
+          <h4>3. Limitations of Liability</h4>
+          <p>AeroClick and its developers are not liable for any hand, wrist, or muscle fatigues arising from excessive clicks or typing exercises. Practice moderation.</p>
+        </section>
+
+        <!-- Cookie Policy Panel -->
+        <section id="panel-cookies" class="legal-panel">
+          <h3>Cookie Policy</h3>
+          <p>Last updated: July 04, 2026</p>
+          <p>AeroClick utilizes local browser caches to optimize performance and save user preferences.</p>
+          
+          <h4>1. How We Use Cookies</h4>
+          <p>We use session tokens, local storage variables, and basic cached packages to:</p>
+          <ul>
+            <li>Maintain user authentication sessions.</li>
+            <li>Store setup configurations and active theme preferences.</li>
+            <li>Run local offline simulations if cloud services are unavailable.</li>
+          </ul>
+
+          <h4>2. Managing Cookie Preferences</h4>
+          <p>You can manage or clear cached cookie histories directly within your browser settings. However, doing so will clear offline local storage profiles.</p>
+        </section>
+
+        <!-- Disclaimer Panel -->
+        <section id="panel-disclaimer" class="legal-panel">
+          <h3>Disclaimer</h3>
+          <p>Last updated: July 04, 2026</p>
+          <p>The information and tests provided on AeroClick are intended for general mechanical dexterity improvement and training purposes.</p>
+          
+          <h4>No Warranties</h4>
+          <p>AeroClick is provided "as is" without any representations or warranties. We do not guarantee that daily practice will qualify players for esports leagues or cure medical wrist conditions like Carpal Tunnel Syndrome.</p>
+        </section>
+
+        <!-- Contact Us Panel -->
+        <section id="panel-contact" class="legal-panel">
+          <div class="contact-grid">
+            <!-- Form Block -->
+            <div>
+              <h3>Get In Touch</h3>
+              <p>Have suggestions, identified bugs, or need database configuration advice? Send us a message.</p>
+              
+              <form id="contact-form" novalidate style="margin-top: 24px;">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Full Name</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email Address</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="e.g. john@domain.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-subject" class="form-label">Subject</label>
+                  <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Database Setup Question" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Your Message</label>
+                  <textarea id="contact-message" class="form-input" rows="5" placeholder="Write your message details..." required style="resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; margin-top: 10px;">
+                  ✉️ Send Message
+                </button>
+              </form>
+            </div>
+
+            <!-- Support info sidebar -->
+            <div>
+              <h3>Support Office</h3>
+              <p>Reach out through official support channels or learn how to connect your Firebase cloud.</p>
+              
+              <ul class="contact-info-list">
+                <li class="contact-info-item">
+                  <div class="contact-info-icon">✉️</div>
+                  <div>
+                    <strong>Support Email</strong>
+                    <p style="font-size: 0.9rem;"><a href="mailto:support@aeroclick.local">support@aeroclick.local</a></p>
+                  </div>
+                </li>
+                <li class="contact-info-item">
+                  <div class="contact-info-icon">⚡</div>
+                  <div>
+                    <strong>Firebase Integration Setup</strong>
+                    <p style="font-size: 0.85rem; line-height: 1.4; color: var(--text-secondary);">
+                      To activate Cloud database syncing, update the placeholders in: <br>
+                      <code style="color: var(--accent-secondary); background: var(--bg-tertiary); padding: 2px 4px; border-radius: 4px;">firebase/config.js</code>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="../js/main.js"></script>
+  <script type="module">
+    import { getCurrentUser } from "../firebase/db.js";
+    import { showToast } from "../js/main.js";
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      // 1. Auth check
+      const user = await getCurrentUser();
+      if (user) {
+        document.getElementById("auth-actions").innerHTML = `
+          <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+        `;
+      }
+
+      // 2. Tab Swapping
+      const tabs = document.querySelectorAll(".legal-tab");
+      const panels = document.querySelectorAll(".legal-panel");
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          tabs.forEach(t => t.classList.remove("active"));
+          panels.forEach(p => p.classList.remove("active"));
+
+          tab.classList.add("active");
+          const target = document.getElementById(tab.dataset.target);
+          if (target) {
+            target.classList.add("active");
+          }
+        });
+      });
+
+      // 3. Router check (e.g. ?tab=contact or ?tab=privacy)
+      const urlParams = new URLSearchParams(window.location.search);
+      const tabParam = urlParams.get("tab");
+      const hashParam = window.location.hash;
+
+      if (tabParam) {
+        const matchingTab = document.querySelector(`[data-target="panel-${tabParam}"]`);
+        if (matchingTab) matchingTab.click();
+      } else if (hashParam === "#contact") {
+        const contactTab = document.getElementById("tab-contact-btn");
+        if (contactTab) contactTab.click();
+      }
+
+      // 4. Contact Form Submission
+      const contactForm = document.getElementById("contact-form");
+      const nameInput = document.getElementById("contact-name");
+      const emailInput = document.getElementById("contact-email");
+      const subjectInput = document.getElementById("contact-subject");
+      const messageInput = document.getElementById("contact-message");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Simple validations
+        if (!nameInput.value.trim() || !emailInput.value.trim() || !subjectInput.value.trim() || !messageInput.value.trim()) {
+          showToast("Please fill in all contact form fields.", "danger");
+          return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim())) {
+          showToast("Please enter a valid email address.", "danger");
+          return;
+        }
+
+        // Simulate sending message
+        showToast("Message sent successfully! We will get back to you shortly.", "success");
+        contactForm.reset();
+      });
+    });
+  </script>
+</body>
+</html>

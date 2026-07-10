@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Practice Results | AeroClick</title>
+  <meta name="description" content="View your guest practice results on AeroClick and compare score, accuracy, CPS, and reaction speed instantly.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Practice Results | AeroClick">
+  <meta property="og:description" content="View your guest practice results on AeroClick and compare score, accuracy, CPS, and reaction speed instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/html/guest-results.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Practice Results | AeroClick">
+  <meta name="twitter:description" content="View your guest practice results on AeroClick and compare score, accuracy, CPS, and reaction speed instantly.">
+  <meta name="keywords" content="guest results, practice summary, score, accuracy, CPS, reaction speed, AeroClick guest mode">
+  <link rel="canonical" href="https://aeroclick.web.app/html/guest-results.html">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/results.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">☀️</button>
+        <a href="../index.html#instant-practice" class="btn btn-secondary">Practice Again</a>
+        <a href="auth.html?signup=true" class="btn btn-primary">Save My Progress</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding: 60px 0; min-height: calc(100vh - 70px);">
+    <div class="container">
+
+      <!-- Guest Warning Banner -->
+      <div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.4); border-radius:var(--border-radius-md); padding:16px 24px; margin-bottom:32px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <span style="font-size:1.5rem;">⚡</span>
+        <div style="flex:1;">
+          <strong style="color:var(--warning);">Guest Practice Session</strong>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:4px;">These results are <strong>not saved</strong> and you are <strong>not ranked</strong> on the leaderboard. Create a free account to track your progress!</p>
+        </div>
+        <a href="auth.html?signup=true" class="btn btn-primary" style="white-space:nowrap;">Create Free Account →</a>
+      </div>
+
+      <!-- Results Grid -->
+      <div class="results-grid">
+
+        <!-- Score Card -->
+        <div class="glass-card result-stat-card">
+          <div class="result-stat-label">Final Score</div>
+          <div class="result-stat-value" id="res-score" style="color:var(--accent-primary);">—</div>
+        </div>
+
+        <div class="glass-card result-stat-card">
+          <div class="result-stat-label">Accuracy</div>
+          <div class="result-stat-value" id="res-accuracy" style="color:var(--accent-tertiary);">—</div>
+        </div>
+
+        <div class="glass-card result-stat-card">
+          <div class="result-stat-label">Clicks/sec (CPS)</div>
+          <div class="result-stat-value" id="res-cps" style="color:var(--accent-secondary);">—</div>
+        </div>
+
+        <div class="glass-card result-stat-card">
+          <div class="result-stat-label">Avg Reaction</div>
+          <div class="result-stat-value" id="res-reaction" style="color:var(--warning);">—</div>
+        </div>
+
+        <div class="glass-card result-stat-card">
+          <div class="result-stat-label">Best Streak</div>
+          <div class="result-stat-value" id="res-streak" style="color:var(--success);">—</div>
+        </div>
+
+        <div class="glass-card result-stat-card">
+          <div class="result-stat-label">Difficulty</div>
+          <div class="result-stat-value" id="res-difficulty" style="color:var(--text-primary); text-transform:capitalize;">—</div>
+        </div>
+
+      </div>
+
+      <!-- Performance Summary -->
+      <div class="glass-card" style="margin-top:32px; text-align:center;">
+        <h3 style="margin-bottom:8px;" id="perf-title">Practice Complete!</h3>
+        <p id="perf-msg" style="color:var(--text-secondary); margin-bottom:24px;"></p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="../index.html#instant-practice" class="btn btn-secondary">⚡ Play Again (Guest)</a>
+          <a href="auth.html?signup=true" class="btn btn-primary">🏆 Create Account & Rank Up</a>
+        </div>
+      </div>
+
+      <!-- What You're Missing CTA -->
+      <div style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+        <div class="glass-card" style="text-align:center; padding:24px;">
+          <div style="font-size:2rem; margin-bottom:8px;">📊</div>
+          <h4>Match History</h4>
+          <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:6px;">Track every session and see your improvement over time.</p>
+        </div>
+        <div class="glass-card" style="text-align:center; padding:24px;">
+          <div style="font-size:2rem; margin-bottom:8px;">🏆</div>
+          <h4>Global Leaderboard</h4>
+          <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:6px;">Compete against players worldwide and earn your rank.</p>
+        </div>
+        <div class="glass-card" style="text-align:center; padding:24px;">
+          <div style="font-size:2rem; margin-bottom:8px;">🎯</div>
+          <h4>Achievements</h4>
+          <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:6px;">Unlock milestones like Deadeye, Speed Demon, and more.</p>
+        </div>
+        <div class="glass-card" style="text-align:center; padding:24px;">
+          <div style="font-size:2rem; margin-bottom:8px;">📈</div>
+          <h4>Personal Bests</h4>
+          <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:6px;">See if you've beaten your own records each session.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      const resultsStr = sessionStorage.getItem("guest_game_results");
+      if (!resultsStr) {
+        window.location.href = "../index.html#instant-practice";
+        return;
+      }
+
+      const match = JSON.parse(resultsStr);
+
+      document.getElementById("res-score").innerText = match.score;
+      document.getElementById("res-accuracy").innerText = `${match.accuracy}%`;
+      document.getElementById("res-cps").innerText = Number(match.cps).toFixed(1);
+      document.getElementById("res-reaction").innerText = match.avgReactionTime > 0 ? `${match.avgReactionTime}ms` : "N/A";
+      document.getElementById("res-streak").innerText = match.bestStreak;
+      document.getElementById("res-difficulty").innerText = match.difficulty || "Medium";
+
+      // Performance message
+      const acc = match.accuracy;
+      let title = "Practice Complete!";
+      let msg = "";
+      if (acc >= 95) {
+        title = "🎯 Outstanding Accuracy!";
+        msg = "You are a sharpshooter. Sign up to track this on the global leaderboard!";
+      } else if (acc >= 80) {
+        title = "👍 Great Session!";
+        msg = "Solid performance. Create an account to see how you compare globally.";
+      } else if (acc >= 60) {
+        title = "💪 Keep Practising!";
+        msg = "Your aim is improving. Sign up to track your progress over time.";
+      } else {
+        title = "🔄 Room to Improve";
+        msg = "Everyone starts somewhere. Create an account and watch yourself grow!";
+      }
+      document.getElementById("perf-title").innerText = title;
+      document.getElementById("perf-msg").innerText = msg;
+
+      // Clear guest data after rendering (no persistence)
+      sessionStorage.removeItem("guest_game_results");
+      sessionStorage.removeItem("guest_game_config");
+    });
+  </script>
+</body>
+</html>

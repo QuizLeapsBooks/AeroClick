@@ -1,0 +1,15 @@
+{
+  "name": "aeroclick",
+  "version": "1.0.0",
+  "description": "AeroClick - Ultimate Mouse & Keyboard Training Platform",
+  "scripts": {
+    "dev": "npx serve . -p 3000 --no-clipboard",
+    "start": "npx serve . -p 3000 --no-clipboard"
+  },
+  "dependencies": {
+    "firebase": "^12.15.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}

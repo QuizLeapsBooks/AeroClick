@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>AeroClick | Ultimate Mouse & Keyboard Training Platform</title>
+  <meta name="description" content="Master mouse accuracy, click speed, reaction time, and typing velocity with AeroClick. Free training tools, custom drills, and competitive tracking for gamers and productivity seekers.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="AeroClick | Ultimate Mouse & Keyboard Training Platform">
+  <meta property="og:description" content="Master mouse accuracy, click speed, reaction time, and typing velocity with AeroClick. Free training tools, custom drills, and competitive tracking for gamers and productivity seekers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AeroClick | Ultimate Mouse & Keyboard Training Platform">
+  <meta name="twitter:description" content="Master mouse accuracy, click speed, reaction time, and typing velocity with AeroClick. Free training tools, custom drills, and competitive tracking for gamers and productivity seekers.">
+  <meta name="keywords" content="mouse training, click speed, CPS, reaction time, typing speed, keyboard training, aim practice, gaming drills">
+  <link rel="canonical" href="https://aeroclick.web.app/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://aeroclick.web.app/",
+        "name": "AeroClick",
+        "description": "Master mouse accuracy, click speed, reaction time, and typing velocity with AeroClick."
+      },
+      {
+        "@type": "Organization",
+        "name": "AeroClick",
+        "url": "https://aeroclick.web.app/"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="html/mouse-study.html" class="nav-link">Mouse Training</a>
+        <a href="html/keyboard-study.html" class="nav-link">Typing Module</a>
+        <a href="html/leaderboard.html" class="nav-link">Leaderboard</a>
+        <a href="html/legal.html" class="nav-link">Contact</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">☀️</button>
+          <div id="auth-actions">
+            <a href="html/auth.html" class="btn btn-secondary">Login</a>
+            <a href="html/auth.html?signup=true" class="btn btn-primary">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="badge">Optimize Your Reflexes</div>
+      <h1 class="hero-title">Elevate Your <span>Precision</span>,<br>Master Your Controls</h1>
+      <p class="hero-desc">AeroClick is a professional training suite designed to push your clicks, reflexes, typing
+        velocity, and spatial hand-eye coordination to elite standards. Free, cloud-synced, and fully customizable.</p>
+      <div class="hero-buttons">
+        <a href="html/auth.html?signup=true" class="btn btn-primary" id="hero-get-started">Get Started (Free)</a>
+        <a href="#instant-practice" class="btn btn-secondary">Try Instantly ⚡</a>
+      </div>
+      <p style="margin-top:12px; font-size:0.85rem; color:var(--text-muted);">No account needed · Results not saved · Just pure practice</p>
+    </div>
+  </header>
+
+  <!-- ===== INSTANT PRACTICE SECTION (Guest Mode) ===== -->
+  <section id="instant-practice" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">No Sign-Up Required</div>
+        <h2 class="section-title">⚡ Instant <span>Practice Mode</span></h2>
+        <p class="section-desc">Jump straight into a training session. No account needed — pick a difficulty and start clicking. Your results won't be saved or ranked.</p>
+      </div>
+
+      <div class="guest-difficulty-grid" id="guest-difficulty-grid">
+
+        <div class="guest-diff-card" data-diff="easy" data-size="70" data-lifetime="2.0" data-count="2" data-moving="false">
+          <div class="guest-diff-icon">🟢</div>
+          <h3>Easy</h3>
+          <p>Large targets · 2s lifetime · 2 targets</p>
+          <ul class="guest-diff-stats">
+            <li>Target size: 70px</li>
+            <li>No movement</li>
+            <li>Great for beginners</li>
+          </ul>
+          <button class="btn btn-secondary guest-practice-btn">Practice Now</button>
+        </div>
+
+        <div class="guest-diff-card" data-diff="medium" data-size="50" data-lifetime="1.5" data-count="3" data-moving="false">
+          <div class="guest-diff-icon">🟡</div>
+          <h3>Medium</h3>
+          <p>Standard targets · 1.5s lifetime · 3 targets</p>
+          <ul class="guest-diff-stats">
+            <li>Target size: 50px</li>
+            <li>No movement</li>
+            <li>Balanced challenge</li>
+          </ul>
+          <button class="btn btn-primary guest-practice-btn">Practice Now</button>
+        </div>
+
+        <div class="guest-diff-card" data-diff="hard" data-size="35" data-lifetime="1.1" data-count="4" data-moving="true">
+          <div class="guest-diff-icon">🔴</div>
+          <h3>Hard</h3>
+          <p>Small moving targets · 1.1s lifetime · 4 targets</p>
+          <ul class="guest-diff-stats">
+            <li>Target size: 35px</li>
+            <li>Moving targets</li>
+            <li>Reflex test</li>
+          </ul>
+          <button class="btn btn-secondary guest-practice-btn">Practice Now</button>
+        </div>
+
+        <div class="guest-diff-card" data-diff="insane" data-size="20" data-lifetime="0.6" data-count="6" data-moving="true">
+          <div class="guest-diff-icon">💀</div>
+          <h3>Insane</h3>
+          <p>Tiny fast targets · 0.6s lifetime · 6 targets</p>
+          <ul class="guest-diff-stats">
+            <li>Target size: 20px</li>
+            <li>Moving targets</li>
+            <li>For pros only</li>
+          </ul>
+          <button class="btn btn-secondary guest-practice-btn">Practice Now</button>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:32px; padding:20px; background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:var(--border-radius-md);">
+        <p style="color:var(--text-secondary); margin-bottom:12px;">⚠️ Guest mode: <strong>scores are not saved</strong> and you won't appear on the leaderboard.</p>
+        <a href="html/auth.html?signup=true" class="btn btn-primary">Create Free Account to Save Progress →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-media">
+          <div class="about-canvas-demo">
+            <div class="demo-target"></div>
+          </div>
+        </div>
+        <div>
+          <div class="badge">About AeroClick</div>
+          <h2 class="section-title">Why We Built <span>AeroClick</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: 24px;">Whether you're clearing targets in a competitive
+            first-person shooter or navigating complex spreadsheets under tight deadlines, the efficiency of your mouse
+            and keyboard inputs directly dictates your performance. AeroClick bridges the gap between practice and
+            mastery.</p>
+          <ul class="about-features">
+            <li>
+              <div class="about-features-icon">1</div>
+              <div>
+                <h4>Interactive Micro-Training</h4>
+                <p>Instantly spawn dynamic target configurations tailored to challenge click speeds (CPS) and spatial
+                  mouse movements.</p>
+              </div>
+            </li>
+            <li>
+              <div class="about-features-icon">2</div>
+              <div>
+                <h4>Rich Typing Analytics</h4>
+                <p>Build your Words Per Minute (WPM) accuracy, learn the Home Row method, and unlock full fingers
+                  alignment.</p>
+              </div>
+            </li>
+            <li>
+              <div class="about-features-icon">3</div>
+              <div>
+                <h4>Cloud Saved Match History</h4>
+                <p>Track your improvements over time with persistent statistics, customized difficulty scaling, and
+                  instant profile rank ups.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Proven Impact</div>
+        <h2 class="section-title">Benefits of <span>Reflex Training</span></h2>
+        <p class="section-desc">Training your physical hand coordination delivers immediate advantages in two key
+          arenas.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Gaming Benefits -->
+        <div class="glass-card benefit-card">
+          <div class="benefit-icon">🎮</div>
+          <h3>Competitive Gaming Benefits</h3>
+          <p>Modern gaming demands split-second response times, muscle memory, and flawless flick-tracking. Professional
+            gaming careers are built on reflex limits.</p>
+          <ul class="benefit-list">
+            <li>Improve spatial tracking and muscle memory</li>
+            <li>Decrease average reaction time below 200ms</li>
+            <li>Increase headshot accuracy in tactical shooters</li>
+            <li>Build click consistency for high APM games</li>
+          </ul>
+        </div>
+
+        <!-- Productivity Benefits -->
+        <div class="glass-card benefit-card">
+          <div class="benefit-icon">💼</div>
+          <h3>Office & Productivity Benefits</h3>
+          <p>Precision inputs save valuable cognitive energy and reduce physical wrist fatigue. Efficiency at your
+            computer keyboard and mouse drives high digital output.</p>
+          <ul class="benefit-list">
+            <li>Double office typing speed (target 70+ WPM)</li>
+            <li>Minimize missed clicks on user interfaces</li>
+            <li>Reduce repetitive stress by optimizing wrist angles</li>
+            <li>Master system shortcuts and hotkeys</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Engine Features</div>
+        <h2 class="section-title">Packed with <span>Elite Features</span></h2>
+        <p class="section-desc">AeroClick is engineered with tools designed to simulate gaming scenarios and key
+          training algorithms.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="glass-card feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3>Custom Target Engine</h3>
+          <p>Configure target lifetime, size, speed, sounds, and active movement vectors to craft custom practice rooms.
+          </p>
+        </div>
+        <div class="glass-card feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Real-Time Telemetry</h3>
+          <p>Get precise click-per-second (CPS) rates, milliseconds reaction times, accuracy metrics, and streak status
+            in-game.</p>
+        </div>
+        <div class="glass-card feature-card">
+          <div class="feature-icon">🥇</div>
+          <h3>Global Leaderboards</h3>
+          <p>Compare scores instantly with users across the world. Dynamic ranking automatically adjusts in real-time.
+          </p>
+        </div>
+        <div class="glass-card feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Achievements System</h3>
+          <p>Unlock custom milestones (Deadeye, speed demon, etc.) as your coordinate click patterns and speed indexes
+            hit new heights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Study Modules Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Education</div>
+        <h2 class="section-title">Explore Our <span>Study Modules</span></h2>
+        <p class="section-desc">Learn the theoretical science of aiming, mouse sensitivities, mechanical layouts, and
+          ergonomic keyboard methods.</p>
+      </div>
+
+      <div class="modules-grid">
+        <!-- Mouse Module -->
+        <div class="glass-card module-card">
+          <div class="module-badge">Mouse Science</div>
+          <h3>Mouse Accuracy & Tuning</h3>
+          <p>Master the mechanics of Dots Per Inch (DPI), sensitivity formulas, mouse grips (claw, palm, fingertip), and
+            practice procedures to optimize click alignment.</p>
+          <div class="module-footer">
+            <a href="html/mouse-study.html" class="btn btn-accent">Study Mouse Training →</a>
+          </div>
+        </div>
+
+        <!-- Keyboard Module -->
+        <div class="glass-card module-card">
+          <div class="module-badge">Keyboard Science</div>
+          <h3>Keyboard Touch Typing</h3>
+          <p>Master muscle memory with the Home Row Method, finger alignments, key shortcuts, and target typing rhythms
+            designed to raise Words Per Minute (WPM) limits.</p>
+          <div class="module-footer">
+            <a href="html/keyboard-study.html" class="btn btn-accent">Study Typing Module →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-container">
+            <div class="logo-icon">A</div>
+            <span class="logo-text">AeroClick</span>
+          </a>
+          <p>Professional training grounds for digital reflexes, typing speeds, and mechanical accuracy.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Training</h4>
+          <ul class="footer-links">
+            <li><a href="html/setup.html">Target Setup</a></li>
+            <li><a href="html/leaderboard.html">Leaderboards</a></li>
+            <li><a href="html/mouse-study.html">Aiming Science</a></li>
+            <li><a href="html/keyboard-study.html">Touch Typing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="html/legal.html?tab=privacy">Privacy Policy</a></li>
+            <li><a href="html/legal.html?tab=terms">Terms of Service</a></li>
+            <li><a href="html/legal.html?tab=cookies">Cookies Policy</a></li>
+            <li><a href="html/legal.html?tab=disclaimer">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="html/legal.html?tab=contact">Contact Form</a></li>
+            <li><a href="mailto:support@aeroclick.local">support@aeroclick.local</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 AeroClick. Built for click perfection.</span>
+        <div class="footer-socials">
+          <span style="font-size: 1.2rem;">🎯 ⚡ 🎹 💎</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global script -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { getCurrentUser } from "./firebase/db.js";
+
+    // Set up Dynamic Navbar button depending on user state
+    async function updateNavbar() {
+      const user = await getCurrentUser();
+      const authActions = document.getElementById("auth-actions");
+      const heroGetStartedBtn = document.getElementById("hero-get-started");
+
+      if (user) {
+        authActions.innerHTML = `
+          <a href="html/dashboard.html" class="btn btn-secondary">Dashboard</a>
+          <a href="html/setup.html" class="btn btn-primary">Start Training</a>
+        `;
+        if (heroGetStartedBtn) {
+          heroGetStartedBtn.innerText = "Start Training Now";
+          heroGetStartedBtn.href = "html/setup.html";
+        }
+      }
+    }
+    document.addEventListener("DOMContentLoaded", updateNavbar);
+
+    // Guest instant practice — wire up difficulty cards
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".guest-practice-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const card = btn.closest(".guest-diff-card");
+          const guestConfig = {
+            isGuest: true,
+            difficulty: card.dataset.diff,
+            size: parseInt(card.dataset.size),
+            lifetime: parseFloat(card.dataset.lifetime),
+            count: parseInt(card.dataset.count),
+            moving: card.dataset.moving === "true",
+            duration: 30,
+            sound: true,
+            animations: true,
+            theme: "neon"
+          };
+          // Clear any previous guest data
+          sessionStorage.removeItem("guest_game_results");
+          sessionStorage.setItem("guest_game_config", JSON.stringify(guestConfig));
+          window.location.href = "html/guest-game.html";
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

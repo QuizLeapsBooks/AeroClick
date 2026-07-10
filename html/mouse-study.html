@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Mouse Science & Aim Training | AeroClick</title>
+  <meta name="description" content="Learn mouse accuracy, aim mechanics, CPS, reaction time, DPI and grip techniques in AeroClick’s mouse training study module.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Mouse Science & Aim Training | AeroClick">
+  <meta property="og:description" content="Learn mouse accuracy, aim mechanics, CPS, reaction time, DPI and grip techniques in AeroClick’s mouse training study module.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/html/mouse-study.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mouse Science & Aim Training | AeroClick">
+  <meta name="twitter:description" content="Learn mouse accuracy, aim mechanics, CPS, reaction time, DPI and grip techniques in AeroClick’s mouse training study module.">
+  <meta name="keywords" content="mouse training, aim mechanics, CPS, reaction time, DPI, grip techniques, mouse accuracy, gaming aim">
+  <link rel="canonical" href="https://aeroclick.web.app/html/mouse-study.html">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/study.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="mouse-study.html" class="nav-link active">Mouse Training</a>
+        <a href="keyboard-study.html" class="nav-link">Typing Module</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+        <a href="legal.html" class="nav-link">Contact</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">☀️</button>
+          <div id="auth-actions">
+            <a href="auth.html" class="btn btn-secondary">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="study-section">
+    <div class="container study-container">
+      
+      <div class="study-header">
+        <div class="badge">Study Module 01</div>
+        <h1 class="study-title">Mouse Accuracy & Aim Mechanics</h1>
+        <p class="study-subtitle">Learn the physical science, mechanical settings, and coordination exercises that define professional mouse aim.</p>
+      </div>
+
+      <!-- Quick Jump Links -->
+      <div class="glass-card" style="padding: 20px; margin-bottom: 40px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+        <span style="font-weight: 700; color: var(--text-secondary);">Table of Contents:</span>
+        <a href="#section-cps" class="nav-link" style="padding: 0;">1. CPS</a> |
+        <a href="#section-reaction" class="nav-link" style="padding: 0;">2. Reaction Time</a> |
+        <a href="#section-accuracy" class="nav-link" style="padding: 0;">3. Accuracy</a> |
+        <a href="#section-dpi" class="nav-link" style="padding: 0;">4. DPI & Sensitivity</a> |
+        <a href="#section-grip" class="nav-link" style="padding: 0;">5. Grip Types</a> |
+        <a href="#section-benefits" class="nav-link" style="padding: 0;">6. Training Benefits</a>
+      </div>
+
+      <!-- Topic 1: CPS -->
+      <article id="section-cps" class="glass-card topic-card">
+        <div class="topic-header">
+          <div class="topic-icon">⚡</div>
+          <h3>Clicks Per Second (CPS)</h3>
+        </div>
+        <div class="topic-content">
+          <p>Clicks Per Second (CPS) is a metric that measures input frequency. In gaming, high CPS speeds are vital for rapidly executing weapon triggers, building defense structures, or cycling actions. In productivity environments, high click rates contribute to speedy UI navigation and macro execution.</p>
+          
+          <div class="study-callout">
+            <h4>💡 Pro Tip: Butterfly and Jitter Clicking</h4>
+            <p>Advanced techniques like <strong>Jitter Clicking</strong> (vibrating arm muscles to click quickly) and <strong>Butterfly Clicking</strong> (using two alternating fingers on a single mouse key) can raise click speeds beyond 12+ CPS. However, always prioritize hand ergonomics to prevent fatigue or repetitive strains.</p>
+          </div>
+
+          <!-- Micro-Interactive CPS Tester Widget -->
+          <div class="study-widget">
+            <h4>⚡ Interactive Mini CPS Tester</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Click the box below as fast as possible to measure your click rate over 5 seconds.</p>
+            <div class="cps-tester-box" id="cps-box">
+              <div class="cps-tester-score" id="cps-score">Click to Start</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted);" id="cps-sub">Time: 5.0s | Clicks: 0</div>
+            </div>
+            <button class="btn btn-secondary" id="cps-reset-btn" style="margin-top: 10px; display: none;">Reset Test</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Topic 2: Reaction Time -->
+      <article id="section-reaction" class="glass-card topic-card">
+        <div class="topic-header">
+          <div class="topic-icon">👁️</div>
+          <h3>Reaction Time</h3>
+        </div>
+        <div class="topic-content">
+          <p>Reaction time measures the duration between a visual cue appearing on screen and your physical motor cortex executing a click. The average human response time to visual stimuli sits around <strong>250 milliseconds (ms)</strong>. Consistent training can shave this metric down below 200ms or even 150ms for elite gamers.</p>
+          
+          <!-- Micro-Interactive Reaction Time Widget -->
+          <div class="study-widget">
+            <h4>👁️ Interactive Reaction Time Tester</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Click the red box below. Wait for it to turn green, then click as fast as you can!</p>
+            <div class="react-tester-box state-ready" id="react-box">
+              Click to Begin
+            </div>
+            <div style="font-size: 0.95rem; font-weight: 700; margin-top: 10px;" id="react-result">Best Response: --</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Topic 3: Accuracy -->
+      <article id="section-accuracy" class="glass-card topic-card">
+        <div class="topic-header">
+          <div class="topic-icon">🎯</div>
+          <h3>Target Accuracy</h3>
+        </div>
+        <div class="topic-content">
+          <p>Accuracy represents the percentage of clicks that hit an active target relative to the total clicks registered. In both office workspaces and game lobbies, precision takes precedence over speed. High click speed with poor accuracy results in wasted motion and missed deadlines/enemies.</p>
+          <p>Aim training centers on building <strong>"muscle memory"</strong>: training your motor pathways so that your hand knows the exact distance to move the mouse cursor to cover a distance on screen, without requiring conscious eye adjustments.</p>
+        </div>
+      </article>
+
+      <!-- Topic 4: DPI & Sensitivity -->
+      <article id="section-dpi" class="glass-card topic-card">
+        <div class="topic-header">
+          <div class="topic-icon">⚙️</div>
+          <h3>DPI and Sensitivity</h3>
+        </div>
+        <div class="topic-content">
+          <p>Your cursor movement speed is determined by two combined values:</p>
+          <ul>
+            <li><strong>DPI (Dots Per Inch)</strong>: A hardware setting on the mouse sensor indicating how many digital pixels the cursor covers for each physical inch the mouse moves. Common settings range between 400 DPI (slower) and 1600+ DPI (faster).</li>
+            <li><strong>In-game or OS Sensitivity</strong>: A software-side multiplier that increases or decreases the sensor signals.</li>
+          </ul>
+          <div class="study-callout" style="border-left-color: var(--accent-tertiary);">
+            <h4>📐 Effective DPI (eDPI) Formula</h4>
+            <p>To compare sensitivities across different hardware rigs, calculate your eDPI: <strong>eDPI = Mouse DPI × Software Sensitivity</strong>. Competitive shooters generally favor a lower eDPI (e.g. 400-800 DPI) because it facilitates micro-adjustments and increases aiming precision.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Topic 5: Mouse Grip -->
+      <article id="section-grip" class="glass-card topic-card">
+        <div class="topic-header">
+          <div class="topic-icon">🖐️</div>
+          <h3>Mouse Grip Types</h3>
+        </div>
+        <div class="topic-content">
+          <p>How you hold your mouse shapes your aiming mechanics. There are three classic hand postures:</p>
+          <div class="results-grid" style="grid-template-columns: repeat(3, 1fr); margin: 20px 0;">
+            <div class="metric-card" style="text-align: left;">
+              <h4 style="color: var(--accent-primary); margin-bottom: 6px;">1. Palm Grip</h4>
+              <p style="font-size: 0.85rem; line-height: 1.4;">Your entire palm rests on the mouse shell, with fingers flat. Excellent comfort and tracking control, but limits micro-adjustments from the wrist.</p>
+            </div>
+            <div class="metric-card" style="text-align: left;">
+              <h4 style="color: var(--accent-secondary); margin-bottom: 6px;">2. Claw Grip</h4>
+              <p style="font-size: 0.85rem; line-height: 1.4;">Your palm contacts only the back of the mouse, while fingers arch up like talons. Provides high stability and faster trigger clicks.</p>
+            </div>
+            <div class="metric-card" style="text-align: left;">
+              <h4 style="color: var(--accent-tertiary); margin-bottom: 6px;">3. Fingertip Grip</h4>
+              <p style="font-size: 0.85rem; line-height: 1.4;">Your palm does not touch the mouse at all; only fingertips guide the chassis. Maximizes flick speeds and small cursor adjustments, but has higher fatigue levels.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Topic 6: Benefits -->
+      <article id="section-benefits" class="glass-card topic-card">
+        <div class="topic-header">
+          <div class="topic-icon">🏆</div>
+          <h3>Productivity & Gaming Benefits</h3>
+        </div>
+        <div class="topic-content">
+          <p>Training your spatial reflexes delivers tangible real-world results:</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+            <div>
+              <h4 style="color: var(--success); margin-bottom: 8px;">🎮 In Competitive Gaming</h4>
+              <p>Achieve consistent flick-shots, track moving opponents smoothly, reduce visual screen noise during target sweeps, and secure high leaderboard ranks.</p>
+            </div>
+            <div>
+              <h4 style="color: var(--accent-tertiary); margin-bottom: 8px;">💼 In Professional Workspaces</h4>
+              <p>Speed up spreadsheet cell selections, draft CAD models cleanly, execute screen clipping actions, and reduce wrist strain by minimizing redundant adjustments.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CTA -->
+      <div style="text-align: center; margin-top: 50px;">
+        <h3 style="margin-bottom: 16px;">Ready to Put Theory Into Practice?</h3>
+        <a href="setup.html" class="btn btn-primary btn-large" style="padding: 14px 32px; font-size: 1.1rem;">⚡ OPEN THE TRAINING ROOM</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="../js/main.js"></script>
+  <script type="module">
+    import { getCurrentUser } from "../firebase/db.js";
+
+    // 1. Dynamic navbar auth check
+    document.addEventListener("DOMContentLoaded", async () => {
+      const user = await getCurrentUser();
+      if (user) {
+        document.getElementById("auth-actions").innerHTML = `
+          <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+        `;
+      }
+    });
+
+    /* ========================================================
+       INTERACTIVE WIDGET 1: CPS CLICKER
+       ======================================================== */
+    const cpsBox = document.getElementById("cps-box");
+    const cpsScore = document.getElementById("cps-score");
+    const cpsSub = document.getElementById("cps-sub");
+    const cpsReset = document.getElementById("cps-reset-btn");
+
+    let cpsClicks = 0;
+    let cpsTimeLeft = 5.0;
+    let cpsTimer = null;
+    let cpsRunning = false;
+
+    cpsBox.addEventListener("mousedown", () => {
+      if (!cpsRunning && cpsTimeLeft === 5.0) {
+        // Start test
+        cpsRunning = true;
+        cpsBox.classList.add("active");
+        cpsTimer = setInterval(() => {
+          cpsTimeLeft = Math.max(0, cpsTimeLeft - 0.1);
+          cpsSub.innerText = `Time: ${cpsTimeLeft.toFixed(1)}s | Clicks: ${cpsClicks}`;
+          
+          if (cpsTimeLeft <= 0) {
+            clearInterval(cpsTimer);
+            cpsRunning = false;
+            const cpsRate = (cpsClicks / 5.0).toFixed(1);
+            cpsScore.innerText = `${cpsRate} CPS`;
+            cpsSub.innerText = `Finished! Total clicks: ${cpsClicks}`;
+            cpsReset.style.display = "inline-block";
+          }
+        }, 100);
+      }
+
+      if (cpsTimeLeft > 0) {
+        cpsClicks++;
+        cpsScore.innerText = cpsClicks;
+        cpsSub.innerText = `Time: ${cpsTimeLeft.toFixed(1)}s | Clicks: ${cpsClicks}`;
+      }
+    });
+
+    cpsReset.addEventListener("click", () => {
+      cpsClicks = 0;
+      cpsTimeLeft = 5.0;
+      cpsScore.innerText = "Click to Start";
+      cpsSub.innerText = "Time: 5.0s | Clicks: 0";
+      cpsReset.style.display = "none";
+      cpsBox.classList.remove("active");
+    });
+
+    /* ========================================================
+       INTERACTIVE WIDGET 2: REACTION TIME
+       ======================================================== */
+    const reactBox = document.getElementById("react-box");
+    const reactResult = document.getElementById("react-result");
+
+    let reactState = "ready"; // 'ready', 'wait', 'now'
+    let reactTimeout = null;
+    let reactStartTime = 0;
+    let bestReact = 9999;
+
+    reactBox.addEventListener("mousedown", () => {
+      if (reactState === "ready") {
+        // Change to wait state (red)
+        reactState = "wait";
+        reactBox.className = "react-tester-box state-wait";
+        reactBox.innerText = "WAIT FOR GREEN...";
+        
+        // Random timeout between 2 and 5 seconds
+        const delay = Math.random() * 3000 + 2000;
+        reactTimeout = setTimeout(() => {
+          reactState = "now";
+          reactBox.className = "react-tester-box state-now";
+          reactBox.innerText = "CLICK NOW!!!";
+          reactStartTime = Date.now();
+        }, delay);
+
+      } else if (reactState === "wait") {
+        // Clicked too early!
+        clearTimeout(reactTimeout);
+        reactState = "ready";
+        reactBox.className = "react-tester-box state-ready";
+        reactBox.innerText = "TOO EARLY! Click to retry.";
+      } else if (reactState === "now") {
+        // Successful click!
+        const reaction = Date.now() - reactStartTime;
+        reactState = "ready";
+        reactBox.className = "react-tester-box state-ready";
+        reactBox.innerText = `${reaction} ms! Click to retry.`;
+        
+        bestReact = Math.min(bestReact, reaction);
+        reactResult.innerText = `Best Response: ${bestReact}ms`;
+      }
+    });
+  </script>
+</body>
+</html>

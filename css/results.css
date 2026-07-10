@@ -1,0 +1,186 @@
+/* Stylesheet for Results page */
+
+.results-section {
+  padding: 60px 0;
+  flex-grow: 1;
+}
+
+.results-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.results-card {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Score Circle Gauge */
+.score-gauge-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.score-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--bg-tertiary) 40%, transparent 100%);
+  border: 8px solid var(--accent-primary);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.4), inset 0 0 30px rgba(99, 102, 241, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: pulseGlow 3s infinite alternate;
+}
+
+.score-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.score-value {
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Stats Layout */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.metric-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  padding: 20px;
+  transition: transform var(--transition-speed);
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.04);
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+/* Improvement Analytics */
+.improvement-box {
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: var(--border-radius-md);
+  padding: 24px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.improvement-box h4 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.improvement-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 576px) {
+  .improvement-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.improvement-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border-radius: var(--border-radius-sm);
+}
+
+.delta {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.delta.positive {
+  color: var(--success);
+}
+
+.delta.negative {
+  color: var(--danger);
+}
+
+.delta.neutral {
+  color: var(--text-muted);
+}
+
+/* Rank Badge Styles */
+.rank-badge-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  border: 1px solid transparent;
+}
+
+.rank-bronze { background: rgba(205, 127, 50, 0.1); border-color: rgba(205, 127, 50, 0.3); color: #cd7f32; }
+.rank-silver { background: rgba(192, 192, 192, 0.1); border-color: rgba(192, 192, 192, 0.3); color: #c0c0c0; }
+.rank-gold { background: rgba(255, 215, 0, 0.1); border-color: rgba(255, 215, 0, 0.3); color: #ffd700; }
+.rank-platinum { background: rgba(229, 228, 226, 0.1); border-color: rgba(229, 228, 226, 0.3); color: #e5e4e2; }
+.rank-diamond { background: rgba(185, 242, 255, 0.1); border-color: rgba(185, 242, 255, 0.3); color: #b9f2ff; }
+.rank-master { background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.3); color: #a855f7; }
+.rank-grandmaster { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #ef4444; }
+
+/* Buttons Row */
+.results-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .results-actions {
+    flex-direction: column;
+  }
+}

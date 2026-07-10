@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Training Room Setup | AeroClick</title>
+  <meta name="description" content="Configure your AeroClick training room with difficulty presets, target settings, and custom challenge parameters for better practice.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Training Room Setup | AeroClick">
+  <meta property="og:description" content="Configure your AeroClick training room with difficulty presets, target settings, and custom challenge parameters for better practice.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/html/setup.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Training Room Setup | AeroClick">
+  <meta name="twitter:description" content="Configure your AeroClick training room with difficulty presets, target settings, and custom challenge parameters for better practice.">
+  <meta name="keywords" content="training setup, difficulty presets, target settings, challenge configuration, training room, custom practice">
+  <link rel="canonical" href="https://aeroclick.web.app/html/setup.html">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/setup.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="mouse-study.html" class="nav-link">Mouse Training</a>
+        <a href="keyboard-study.html" class="nav-link">Typing Module</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+        <a href="legal.html" class="nav-link">Contact</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">☀️</button>
+          <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+          <button id="logout-btn" class="btn btn-accent btn-icon" title="Logout">🚪</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Setup Section -->
+  <main class="setup-section">
+    <div class="container">
+      <div class="setup-header">
+        <h2 class="setup-title">Configure Your Training</h2>
+        <p style="color: var(--text-secondary); margin-top: 8px;">Select a preset or customize parameters below to create your target room.</p>
+      </div>
+
+      <div class="setup-grid">
+        <!-- Configuration Card -->
+        <div class="glass-card">
+          <h3 style="margin-bottom: 20px;">1. Choose Difficulty Preset</h3>
+          <div class="difficulty-grid">
+            <button class="difficulty-btn" data-diff="easy">Easy</button>
+            <button class="difficulty-btn active" data-diff="medium">Medium</button>
+            <button class="difficulty-btn" data-diff="hard">Hard</button>
+            <button class="difficulty-btn" data-diff="expert">Expert</button>
+            <button class="difficulty-btn" data-diff="insane">Insane</button>
+          </div>
+
+          <h3 style="margin-bottom: 20px; border-top: 1px solid var(--glass-border); padding-top: 24px;">2. Fine-Tune Parameters</h3>
+          
+          <div class="setup-row">
+            <div class="setup-label-row">
+              <label for="circle-lifetime" class="form-label">Target Lifetime (seconds)</label>
+              <span class="slider-val" id="lifetime-val">1.5s</span>
+            </div>
+            <input type="range" id="circle-lifetime" class="range-slider" min="0.5" max="3.0" step="0.1" value="1.5">
+            <div class="form-help">Time before a target disappears, triggering a miss score.</div>
+          </div>
+
+          <div class="setup-row">
+            <div class="setup-label-row">
+              <label for="circle-size" class="form-label">Target Diameter (pixels)</label>
+              <span class="slider-val" id="size-val">50px</span>
+            </div>
+            <input type="range" id="circle-size" class="range-slider" min="20" max="100" step="5" value="50">
+            <div class="form-help">Smaller targets require high precision; larger targets favor speed.</div>
+          </div>
+
+          <div class="setup-row">
+            <div class="setup-label-row">
+              <label for="circle-count" class="form-label">Simultaneous Targets</label>
+              <span class="slider-val" id="count-val">3</span>
+            </div>
+            <input type="range" id="circle-count" class="range-slider" min="1" max="8" step="1" value="3">
+            <div class="form-help">Total target entities allowed on screen at once.</div>
+          </div>
+
+          <div class="setup-row">
+            <div class="setup-label-row">
+              <label for="session-duration" class="form-label">Session Duration (seconds)</label>
+              <span class="slider-val" id="duration-val">30s</span>
+            </div>
+            <input type="range" id="session-duration" class="range-slider" min="15" max="120" step="15" value="30">
+            <div class="form-help">Total gameplay training session length.</div>
+          </div>
+
+          <h3 style="margin-bottom: 20px; border-top: 1px solid var(--glass-border); padding-top: 24px;">3. Gameplay Settings</h3>
+          
+          <div class="toggle-row">
+            <div>
+              <strong style="display: block;">Moving Targets</strong>
+              <span class="form-help">Targets slide randomly around the training board.</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="moving-targets">
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <div class="toggle-row">
+            <div>
+              <strong style="display: block;">Sound Effects</strong>
+              <span class="form-help">Play audio tones on successful hits or missed clicks.</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="sound-effects" checked>
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <div class="toggle-row" style="border-bottom: none;">
+            <div>
+              <strong style="display: block;">Animations</strong>
+              <span class="form-help">Enable scale pulses and explosion animations.</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="animations-enabled" checked>
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Preview and Launch Panel -->
+        <div>
+          <div class="glass-card preview-card">
+            <h3>Target Preview</h3>
+            <p class="form-help" style="margin-bottom: 10px;">Visual indicator of setup size</p>
+            <div class="preview-container">
+              <div class="preview-target animate" id="preview-target" style="width: 50px; height: 50px;">
+                <div class="preview-target-dot" id="preview-dot"></div>
+              </div>
+            </div>
+            
+            <h3 style="margin-top: 15px; margin-bottom: 10px;">Select Visual Theme</h3>
+            <div class="theme-swatches">
+              <div class="theme-swatch active" data-theme-id="neon">
+                <div class="swatch-color" style="background: linear-gradient(135deg, #6366f1, #a855f7);"></div>
+                <span>Neon</span>
+              </div>
+              <div class="theme-swatch" data-theme-id="cyber">
+                <div class="swatch-color" style="background: linear-gradient(135deg, #eab308, #d97706);"></div>
+                <span>Cyber</span>
+              </div>
+              <div class="theme-swatch" data-theme-id="matrix">
+                <div class="swatch-color" style="background: linear-gradient(135deg, #22c55e, #15803d);"></div>
+                <span>Matrix</span>
+              </div>
+              <div class="theme-swatch" data-theme-id="sunset">
+                <div class="swatch-color" style="background: linear-gradient(135deg, #f43f5e, #be123c);"></div>
+                <span>Sunset</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary setup-action-btn" id="start-training-btn">
+              ⚡ START TRAINING
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/setup.js"></script>
+</body>
+</html>

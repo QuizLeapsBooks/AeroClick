@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>User Dashboard | AeroClick</title>
+  <meta name="description" content="Access your AeroClick dashboard to view progress, records, session history, and personalized training insights.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="User Dashboard | AeroClick">
+  <meta property="og:description" content="Access your AeroClick dashboard to view progress, records, session history, and personalized training insights.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeroclick.web.app/html/dashboard.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="User Dashboard | AeroClick">
+  <meta name="twitter:description" content="Access your AeroClick dashboard to view progress, records, session history, and personalized training insights.">
+  <meta name="keywords" content="dashboard, progress, records, session history, training insights, performance summary, AeroClick profile">
+  <link rel="canonical" href="https://aeroclick.web.app/html/dashboard.html">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/results.css"> <!-- Reuses rank styles -->
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">AeroClick</span>
+      </a>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="mouse-study.html" class="nav-link">Mouse Training</a>
+        <a href="keyboard-study.html" class="nav-link">Typing Module</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+        <a href="legal.html" class="nav-link">Contact</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">☀️</button>
+          <a href="setup.html" class="btn btn-primary">Start Training</a>
+          <button id="logout-btn" class="btn btn-accent btn-icon" title="Sign Out">🚪</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <main class="dashboard-section">
+    <div class="container">
+      <div class="dashboard-grid">
+        <!-- Sidebar Panel -->
+        <aside class="glass-card profile-sidebar">
+          <div class="profile-avatar-large" id="profile-avatar">U</div>
+          <h3 class="profile-username" id="profile-username">Username</h3>
+          
+          <div style="margin-bottom: 20px;">
+            <div class="rank-badge-container rank-bronze" id="profile-rank" style="font-size: 0.75rem; padding: 4px 12px; margin-bottom: 0;">
+              <span id="rank-icon">🥉</span> <span id="rank-name">Bronze Rank</span>
+            </div>
+            <div id="profile-global-rank" style="display: none; font-size: 0.8rem; color: var(--accent-tertiary); font-weight: 600; margin-top: 8px;"></div>
+          </div>
+
+          <div class="profile-joined" id="profile-joined">Joined: --</div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <button class="sidebar-menu-btn active" data-target="panel-stats">
+                📊 Statistics Overview
+              </button>
+            </li>
+            <li>
+              <button class="sidebar-menu-btn" data-target="panel-analytics">
+                📈 Analytics & Charts
+              </button>
+            </li>
+            <li>
+              <button class="sidebar-menu-btn" data-target="panel-achievements">
+                🏆 Achievements
+              </button>
+            </li>
+            <li>
+              <button class="sidebar-menu-btn" data-target="panel-history">
+                📜 Match History
+              </button>
+            </li>
+            <li>
+              <button class="sidebar-menu-btn" data-target="panel-social">
+                🫂 Social & Friends
+              </button>
+            </li>
+            <li>
+              <button class="sidebar-menu-btn" data-target="panel-settings">
+                ⚙️ Profile Settings
+              </button>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Main Panel Content -->
+        <div class="glass-card" style="min-height: 500px;">
+          
+          <!-- Statistics Panel -->
+          <section id="panel-stats" class="dashboard-panel active">
+            <div class="panel-header">
+              <h3>Performance Dashboard</h3>
+            </div>
+            
+            <h4 style="margin-bottom: 16px; color: var(--text-secondary);">Personal Best Records</h4>
+            <div class="stats-summary-grid">
+              <div class="metric-card" style="border-color: rgba(99, 102, 241, 0.2);">
+                <div class="metric-label">Best Score</div>
+                <div class="metric-value" id="stat-pb-score" style="color: var(--accent-primary);">0</div>
+              </div>
+              <div class="metric-card" style="border-color: rgba(6, 182, 212, 0.2);">
+                <div class="metric-label">Max Accuracy</div>
+                <div class="metric-value" id="stat-pb-accuracy" style="color: var(--accent-tertiary);">0%</div>
+              </div>
+              <div class="metric-card" style="border-color: rgba(168, 85, 247, 0.2);">
+                <div class="metric-label">Avg Reaction Time</div>
+                <div class="metric-value" id="stat-pb-reaction" style="color: var(--accent-secondary);">0ms</div>
+              </div>
+            </div>
+
+            <h4 style="margin-top: 30px; margin-bottom: 16px; color: var(--text-secondary);">Cumulative Telemetry</h4>
+            <div class="stats-summary-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+              <div class="metric-card">
+                <div class="metric-label">Total Sessions</div>
+                <div class="metric-value" id="stat-total-games">0</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Total Clicks</div>
+                <div class="metric-value" id="stat-total-clicks">0</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Total Hits</div>
+                <div class="metric-value" id="stat-total-hits" style="color: var(--success);">0</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Total Misses</div>
+                <div class="metric-value" id="stat-total-misses" style="color: var(--danger);">0</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Total Play Time</div>
+                <div class="metric-value" id="stat-total-playtime" style="color: var(--accent-tertiary);">0m</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Achievements Panel -->
+          <section id="panel-achievements" class="dashboard-panel">
+            <div class="panel-header">
+              <h3>Trophies & Milestones</h3>
+            </div>
+            <div class="achievements-grid" id="achievements-list">
+              <!-- Populated dynamically -->
+            </div>
+          </section>
+
+          <!-- Analytics Panel -->
+          <section id="panel-analytics" class="dashboard-panel">
+            <div class="panel-header" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+              <h3>Performance Analytics</h3>
+              <!-- Time filter -->
+              <div class="analytics-filter-tabs" id="analytics-filter">
+                <button class="analytics-tab active" data-filter="all">All Time</button>
+                <button class="analytics-tab" data-filter="weekly">This Week</button>
+                <button class="analytics-tab" data-filter="monthly">This Month</button>
+              </div>
+            </div>
+
+            <!-- Score trend line chart -->
+            <div class="analytics-card">
+              <h4 class="analytics-chart-title">📊 Score Trend — Last 10 Games</h4>
+              <div class="chart-wrap">
+                <canvas id="chart-score-trend" width="700" height="200"></canvas>
+                <p class="chart-empty" id="chart-score-empty" style="display:none;">Play at least 2 games to see your score trend.</p>
+              </div>
+            </div>
+
+            <!-- Best vs Average comparison -->
+            <div class="analytics-two-col">
+              <div class="analytics-card">
+                <h4 class="analytics-chart-title">🎯 Accuracy Distribution</h4>
+                <div class="pie-wrap">
+                  <canvas id="chart-accuracy-pie" width="220" height="220"></canvas>
+                  <div class="pie-legend" id="pie-legend"></div>
+                </div>
+              </div>
+
+              <div class="analytics-card">
+                <h4 class="analytics-chart-title">⚖️ Best vs. Average Stats</h4>
+                <div class="bva-grid" id="bva-grid">
+                  <!-- Populated dynamically -->
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- Match History Panel -->
+          <section id="panel-history" class="dashboard-panel">
+            <div class="panel-header">
+              <h3>Training Match History</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="leaderboard-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Score</th>
+                    <th>Accuracy</th>
+                    <th>CPS Rate</th>
+                    <th>Reaction Time</th>
+                    <th>Difficulty</th>
+                  </tr>
+                </thead>
+                <tbody id="history-table-body">
+                  <!-- Populated dynamically -->
+                  <tr>
+                    <td colspan="6" style="text-align: center; color: var(--text-secondary); padding: 40px 0;">
+                      No match history found. Play a game to record scores.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Social Panel -->
+          <section id="panel-social" class="dashboard-panel">
+            <div class="panel-header">
+              <h3>Social & Friends</h3>
+            </div>
+            
+            <div class="settings-group" style="display: flex; gap: 12px; margin-bottom: 30px; max-width: 500px;">
+              <input type="text" id="add-friend-input" class="form-input" style="flex:1; padding: 10px 14px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 4px; color: white;" placeholder="Enter friend's username...">
+              <button id="add-friend-btn" class="btn btn-primary">Add Friend</button>
+            </div>
+
+            <h4 style="margin-bottom: 16px; color: var(--text-secondary);">Your Friends</h4>
+            <div class="achievements-grid" id="friends-list" style="margin-bottom: 30px;">
+              <!-- Populated dynamically -->
+              <p style="color: var(--text-muted); grid-column: 1 / -1;">You haven't added any friends yet.</p>
+            </div>
+
+            <h4 style="margin-bottom: 16px; color: var(--text-secondary);">Matchmaking Challenges</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+              <div class="metric-card" style="text-align: left; background: rgba(255,255,255,0.01); min-height: 200px; padding: 20px; border-color: rgba(168, 85, 247, 0.15);">
+                <h5 style="color: var(--accent-secondary); margin-bottom: 16px; font-size: 1.1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 8px; font-family: var(--font-heading); display: flex; align-items: center; gap: 8px;">📥 Received Challenges</h5>
+                <div id="received-challenges-list" style="display: flex; flex-direction: column; gap: 12px;">
+                  <p style="color: var(--text-muted); font-size: 0.9rem;">No active challenges from friends.</p>
+                </div>
+              </div>
+              <div class="metric-card" style="text-align: left; background: rgba(255,255,255,0.01); min-height: 200px; padding: 20px; border-color: rgba(99, 102, 241, 0.15);">
+                <h5 style="color: var(--accent-primary); margin-bottom: 16px; font-size: 1.1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 8px; font-family: var(--font-heading); display: flex; align-items: center; gap: 8px;">📤 Sent Challenges</h5>
+                <div id="sent-challenges-list" style="display: flex; flex-direction: column; gap: 12px;">
+                  <p style="color: var(--text-muted); font-size: 0.9rem;">You haven't sent any challenges yet.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Settings Panel -->
+          <section id="panel-settings" class="dashboard-panel">
+            <div class="panel-header">
+              <h3>Preferences & Data Control</h3>
+            </div>
+            
+            <div class="settings-group">
+              <label class="form-label">Active Visual Mode</label>
+              <button class="btn btn-secondary" id="settings-theme-toggle">
+                Toggle Light/Dark Theme
+              </button>
+              <div class="form-help">Instantly swap themes. Theme settings persist locally.</div>
+            </div>
+
+            <div class="settings-group" style="margin-top: 24px;">
+              <label class="form-label" for="settings-country-select">Your Registered Country</label>
+              <div style="display: flex; gap: 12px; align-items: center;">
+                <select id="settings-country-select" class="form-input" style="width: auto; min-width: 220px; appearance: auto; background: var(--bg-secondary); border: 1px solid var(--glass-border); color: white; padding: 8px 12px; border-radius: 4px;">
+                  <!-- Populated dynamically -->
+                </select>
+                <span id="settings-country-flag" style="font-size: 1.5rem; line-height: 1;">🌐</span>
+              </div>
+              <div class="form-help" id="settings-country-help">Auto-detected via network on signup. You can override it here.</div>
+            </div>
+
+            <div class="settings-group" style="margin-top: 40px; border-top: 1px solid var(--glass-border); padding-top: 24px;">
+              <label class="form-label" style="color: var(--danger);">Danger Zone</label>
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <button class="btn btn-accent" id="btn-reset-cache" style="border-color: var(--danger); color: var(--danger);">
+                    Clear Local Offline User Cache
+                  </button>
+                  <div class="form-help">Resets local mock accounts. This has no effect on a real Firebase database.</div>
+                </div>
+                <div>
+                  <button class="btn btn-accent" id="settings-logout-btn" style="border-color: var(--warning); color: var(--warning);">
+                    🚪 Sign Out
+                  </button>
+                  <div class="form-help">Logs you out of your account. Your data is saved.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>

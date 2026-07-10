@@ -1,0 +1,203 @@
+/* Stylesheet for Global Leaderboards */
+
+.leaderboard-section {
+  padding: 60px 0;
+  flex-grow: 1;
+}
+
+.leaderboard-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.leaderboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.leaderboard-title {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* User rank banner card */
+.user-rank-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--border-radius-md);
+  padding: 20px 24px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-rank-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-rank-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.user-rank-details h4 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.user-rank-details p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.user-rank-number {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-tertiary);
+}
+
+/* Search bar filter styling */
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 18px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: all var(--transition-speed);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
+}
+
+/* Leaderboard Table */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.leaderboard-table th {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px 20px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--glass-border);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.leaderboard-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--glass-border);
+  vertical-align: middle;
+}
+
+.leaderboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.leaderboard-table tr {
+  transition: background-color 0.2s;
+}
+
+.leaderboard-table tr:hover {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+/* Top 3 Highlighters */
+.rank-col {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  width: 80px;
+}
+
+.rank-pill {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.rank-1 .rank-pill { background: linear-gradient(135deg, #ffd700, #b8860b); color: #000; box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
+.rank-2 .rank-pill { background: linear-gradient(135deg, #c0c0c0, #808080); color: #000; }
+.rank-3 .rank-pill { background: linear-gradient(135deg, #cd7f32, #8b4513); color: #fff; }
+
+/* Row user highlighted */
+.row-highlight {
+  background: rgba(99, 102, 241, 0.05) !important;
+}
+
+.row-highlight td {
+  border-top: 1px solid rgba(99, 102, 241, 0.2);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.user-badge {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+  .leaderboard-table th, .leaderboard-table td {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+  .user-rank-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .user-rank-info {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,241 @@
+/* Stylesheet for Educational Study Modules */
+
+.study-section {
+  padding: 60px 0;
+  flex-grow: 1;
+}
+
+.study-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.study-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.study-title {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.study-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Topic Sections */
+.topic-card {
+  margin-bottom: 32px;
+  scroll-margin-top: 90px;
+}
+
+.topic-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 12px;
+}
+
+.topic-icon {
+  font-size: 2rem;
+  color: var(--accent-primary);
+}
+
+.topic-header h3 {
+  font-size: 1.6rem;
+}
+
+.topic-content {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.topic-content p {
+  margin-bottom: 16px;
+}
+
+/* Callout highlight boxes */
+.study-callout {
+  background: var(--bg-tertiary);
+  border-left: 4px solid var(--accent-secondary);
+  padding: 20px;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  margin: 24px 0;
+  color: var(--text-primary);
+}
+
+.study-callout h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Micro-interactive Widget containers */
+.study-widget {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-md);
+  padding: 28px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* Interactive CPS Clicker Box */
+.cps-tester-box {
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: var(--border-radius-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s, border-color var(--transition-speed);
+}
+
+.cps-tester-box:active {
+  transform: scale(0.98);
+}
+
+.cps-tester-box.active {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+.cps-tester-score {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+}
+
+/* Interactive Reaction Box */
+.react-tester-box {
+  width: 100%;
+  max-width: 450px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.react-tester-box.state-wait {
+  background-color: #ef4444; /* red */
+  color: white;
+}
+
+.react-tester-box.state-now {
+  background-color: #10b981; /* green */
+  color: white;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.react-tester-box.state-ready {
+  background-color: var(--bg-tertiary);
+  border: 1px dashed var(--glass-border);
+  color: var(--text-secondary);
+}
+
+/* Interactive Typing Exercise Box */
+.typing-tester-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-md);
+  padding: 24px;
+  text-align: left;
+}
+
+.typing-target-text {
+  font-family: monospace;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  user-select: none;
+}
+
+.char-correct {
+  color: var(--success);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.char-incorrect {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.char-current {
+  border-bottom: 2px solid var(--accent-primary);
+  animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+  50% { border-bottom-color: transparent; }
+}
+
+.typing-input {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.typing-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+/* Finger Placement Keyboard layouts */
+.keyboard-layout-demo {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 6px;
+  margin: 20px 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.key-cap {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.key-home {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.05);
+}
