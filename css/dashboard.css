@@ -17,6 +17,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .dashboard-section {
+    padding: 30px 0;
+  }
+}
+
 /* Sidebar Profile */
 .profile-sidebar {
   text-align: center;
@@ -184,6 +190,26 @@
   display: block;
   font-weight: 600;
   margin-bottom: 8px;
+}
+
+@media (max-width: 576px) {
+  .settings-group[style*="display: flex"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .settings-group input {
+    width: 100% !important;
+  }
+  .settings-group button {
+    width: 100% !important;
+  }
+  .settings-group select {
+    width: 100% !important;
+  }
+  .settings-group > div[style*="display: flex"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
 }
 
 /* Analytics Panel Styles */
