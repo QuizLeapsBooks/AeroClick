@@ -3,56 +3,21 @@
   <url>
     <loc>https://aeroclick.web.app/</loc>
     <priority>1.00</priority>
-    <lastmod>2026-07-10</lastmod>
-  </url>
-  <url>
-    <loc>https://aeroclick.web.app/html/auth.html</loc>
-    <priority>0.80</priority>
-    <lastmod>2026-07-10</lastmod>
-  </url>
-  <url>
-    <loc>https://aeroclick.web.app/html/dashboard.html</loc>
-    <priority>0.80</priority>
-    <lastmod>2026-07-10</lastmod>
-  </url>
-  <url>
-    <loc>https://aeroclick.web.app/html/game.html</loc>
-    <priority>0.80</priority>
-    <lastmod>2026-07-10</lastmod>
-  </url>
-  <url>
-    <loc>https://aeroclick.web.app/html/guest-game.html</loc>
-    <priority>0.64</priority>
-    <lastmod>2026-07-10</lastmod>
-  </url>
-  <url>
-    <loc>https://aeroclick.web.app/html/guest-results.html</loc>
-    <priority>0.64</priority>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://aeroclick.web.app/html/leaderboard.html</loc>
-    <priority>0.80</priority>
+    <priority>0.50</priority>
     <lastmod>2026-07-10</lastmod>
   </url>
   <url>
     <loc>https://aeroclick.web.app/html/mouse-study.html</loc>
     <priority>0.70</priority>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://aeroclick.web.app/html/keyboard-study.html</loc>
     <priority>0.70</priority>
-    <lastmod>2026-07-10</lastmod>
-  </url>
-  <url>
-    <loc>https://aeroclick.web.app/html/results.html</loc>
-    <priority>0.64</priority>
-    <lastmod>2026-07-10</lastmod>
-  </url>
-  <url>
-    <loc>https://aeroclick.web.app/html/setup.html</loc>
-    <priority>0.72</priority>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
 </urlset>
